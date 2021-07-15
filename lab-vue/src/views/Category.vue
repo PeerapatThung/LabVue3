@@ -1,29 +1,25 @@
 <template>
+  
   <div class="events">
     <!-- <img alt="Vue logo" src="../assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App" /> -->
+    <h1>Category and its creator</h1>
     <table>
       <tr>
-        <td><EventCard v-for="event in events" :key="event.id" :event="event" /></td>
-        <td> </td>
         <td><DupeCard v-for="event in events" :key="event.id" :event="event" /></td>
         </tr>
     </table>
-    
-    
-    
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import EventCard from '@/components/EventCard.vue'
 import DupeCard from '@/components/DupeEventCard.vue'
 
 export default {
-  name: 'Home',
+  name: 'EventList',
   components: {
-    EventCard, DupeCard
+    DupeCard
   },
   data() {
     return {
