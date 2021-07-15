@@ -3,7 +3,7 @@
   <div class="events">
     <!-- <img alt="Vue logo" src="../assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App" /> -->
-    <h1>Category and its creator</h1>
+    <h1>Events For Good</h1>
     <table>
       <tr>
         <td><DupeCard v-for="event in events" :key="event.id" :event="event" /></td>
@@ -17,7 +17,7 @@
 import DupeCard from '@/components/DupeEventCard.vue'
 
 export default {
-  name: 'EventList',
+  name: 'Category',
   components: {
     DupeCard
   },

@@ -3,10 +3,9 @@
   <div class="events">
     <!-- <img alt="Vue logo" src="../assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App" /> -->
-    <h1>Events For Good</h1>
     <table>
       <tr>
-        <td><EventCard v-for="event in events" :key="event.id" :event="event" /></td>
+        <td><StudentCard v-for="event in events" :key="event.id" :event="event" /></td>
         </tr>
     </table>
   </div>
@@ -14,13 +13,13 @@
 
 <script>
 // @ is an alias to /src
-import EventCard from '@/components/EventCard.vue'
-import EventService from '@/services/EventService.js'
+import StudentCard from '@/components/StudentCard.vue'
+import InfoService from '@/services/InfoService.js'
 
 export default {
-  name: 'EventList',
+  name: 'StudentInfo',
   components: {
-    EventCard
+    StudentCard
   },
   data() {
     return {
@@ -28,7 +27,7 @@ export default {
     }
   },
   created() {
-    EventService.getEvents()
+    InfoService.getEvents()
     .then((response) => {
       this.events = response.data
     })
