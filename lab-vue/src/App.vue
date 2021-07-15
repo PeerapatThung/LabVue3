@@ -27,4 +27,20 @@
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+
+h4 {
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 10px;
+  text-align: right;
+}
+
+table {
+ align-content: center;
+ size: 50px;
+ margin: 10px;
+ padding-block: 10px;
+}
 </style>
